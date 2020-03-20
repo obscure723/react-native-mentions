@@ -69,7 +69,7 @@ export default class MentionsTextInput extends Component {
   }
 
   updateSuggestions(lastKeyword) {
-    this.props.triggerCallback(lastKeyword);
+    this.props.triggerCallback(lastKeyword, this.stopTracking.bind(this));
   }
 
   identifyKeyword(val) {
